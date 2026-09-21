@@ -52,7 +52,7 @@ function Reveal({ children, className = "", onClick, onKeyDown }) {
 const cast = [
   { image: chandraImage, name: "CHANDRA", actor: "KALYANI PRIYADARSHAN", role: "A mysterious woman who arrives in Bengaluru with a mission.", number: "01", tone: "ember" },
   { image: sunnyImage, name: "SUNNY", actor: "NASLEN K GAFOOR", role: "A neighbour who becomes drawn into Chandra's mystery.", number: "02", tone: "warm" },
-  { image: nachiyappaImage, name: "NACHIYAPPA GOWDA", actor: "SANDY MASTER", role: "A distinctive presence in the growing world of Lokah.", number: "03", tone: "blue" },
+  { image: nachiyappaImage, name: "NACHIYAPPA GOWDA", nameLines: ["NACHIYAPPA", "GOWDA"], actor: "SANDY MASTER", role: "A distinctive presence in the growing world of Lokah.", number: "03", tone: "blue" },
   { image: chathanImage, name: "CHATHAN", actor: "TOVINO THOMAS", role: "A supernatural figure within the wider universe.", number: "04", tone: "crimson" },
   { image: naijilImage, name: "NAIJIL", actor: "ARUN KURIAN", role: "Part of Sunny's side of the story.", number: "05", tone: "violet" },
   { image: venuImage, name: "VENU", actor: "CHANDU SALIMKUMAR", role: "Another thread in the strange city around them.", number: "06", tone: "violet" },
@@ -332,7 +332,16 @@ function App() {
                 <div className="character-copy">
                   <span className="character-number">{person.number}</span>
                   <p className="kicker">CAST</p>
-                  <h2>{person.name}</h2>
+                  <h2>
+                    {person.nameLines ? (
+                      <>
+                        <span className="character-name-line">{person.nameLines[0]}</span>
+                        <span className="character-name-line">{person.nameLines[1]}</span>
+                      </>
+                    ) : (
+                      person.name
+                    )}
+                  </h2>
                   <p className="character-actor">{person.actor}</p>
                   <p className="character-role">{person.role}</p>
                 </div>
