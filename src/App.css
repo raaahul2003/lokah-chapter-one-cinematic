@@ -1322,6 +1322,7 @@ img {
   .story-beat {
     width: 86vw;
     left: 50%;
+    top: 42%;
     text-align: center
   }
 
@@ -1329,21 +1330,38 @@ img {
     font-size: 18vw
   }
 
+  .story-beat--arrival {
+    top: 37%
+  }
+
+  .story-beat--arrival h2 {
+    font-size: clamp(40px, 13vw, 96px)
+  }
+
+  .story-beat--mission {
+    top: 54%
+  }
+
+  .story-beat--mission h2 {
+    font-size: clamp(34px, 11vw, 82px)
+  }
+
+  .story-beat--mission p:last-child {
+    font-size: 12px;
+    margin-top: 20px;
+    max-width: 300px
+  }
+
   .story-beat--enter {
     left: 22px;
-    bottom: 16vh;
+    bottom: 18vh;
     width: 86vw;
     text-align: left;
     transform: none
   }
 
   .story-beat--enter h2 {
-    font-size: 19vw
-  }
-
-  .story-beat--mission p:last-child {
-    font-size: 12px;
-    margin-top: 20px
+    font-size: clamp(36px, 14vw, 92px)
   }
 
   .scene-backdrop {
