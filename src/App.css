@@ -486,6 +486,58 @@ img {
   background: var(--ember)
 }
 
+@media (max-width: 767px) {
+  .world-panel-content {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 22vh 7vw 18vh;
+    max-width: none
+  }
+
+  .world-panel-content h2 {
+    font-size: clamp(52px, 17vw, 118px);
+    line-height: .82
+  }
+
+  .world-panel-content>p:last-child {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 300px
+  }
+
+  .world-steps {
+    left: 50%;
+    right: auto;
+    top: auto;
+    bottom: 26px;
+    transform: translateX(-50%);
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    width: calc(100% - 32px)
+  }
+
+  .world-steps button {
+    grid-template-columns: auto;
+    text-align: center;
+    gap: 4px
+  }
+
+  .world-panel-index {
+    right: 50%;
+    bottom: 18px;
+    transform: translateX(50%)
+  }
+
+  .world-bridge {
+    left: 50%;
+    bottom: 60px;
+    transform: translateX(-50%);
+    justify-content: center
+  }
+}
+
 .character-sequence {
   height: 650vh;
   position: relative;
@@ -602,7 +654,7 @@ img {
   left: 8.3vw;
   top: 50%;
   transform: translateY(-43%);
-  width: min(900px, 70vw)
+  width: min(540px, 62vw)
 }
 
 .character-number {
@@ -617,8 +669,14 @@ img {
 
 .character-copy h2 {
   margin: 0;
-  font: 500 clamp(80px, 10.5vw, 165px)/.75 "Playfair Display", serif;
-  letter-spacing: -.085em
+  max-width: min(500px, 98vw);
+  color: var(--ivory);
+  font: 500 clamp(42px, 5vw, 118px)/.72 "Playfair Display", serif;
+  letter-spacing: -.085em;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  text-wrap: balance;
+  text-shadow: 0 6px 30px rgba(0, 0, 0, .45)
 }
 
 .character-actor {
@@ -1310,17 +1368,21 @@ img {
 
   .world-panel-content {
     padding: 22px 22px 90px;
-    justify-content: flex-end
+    justify-content: center;
+    align-items: center;
+    text-align: center
   }
 
   .world-panel-content h2 {
-    font-size: 19vw
+    font-size: 16vw
   }
 
   .world-panel-content>p:last-child {
     font-size: 12px;
     max-width: 290px;
-    margin-top: 21px
+    margin-top: 21px;
+    margin-left: auto;
+    margin-right: auto
   }
 
   .world-panel-overlay {
