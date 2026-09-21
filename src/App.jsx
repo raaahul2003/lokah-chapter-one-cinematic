@@ -335,8 +335,9 @@ function App() {
                   <h2>
                     {person.nameLines ? (
                       <>
-                        <span className="character-name-line">{person.nameLines[0]}</span>
-                        <span className="character-name-line">{person.nameLines[1]}</span>
+                        <span className="character-name-line character-name-line--desktop">{person.name}</span>
+                        <span className="character-name-line character-name-line--mobile">{person.nameLines[0]}</span>
+                        <span className="character-name-line character-name-line--mobile">{person.nameLines[1]}</span>
                       </>
                     ) : (
                       person.name

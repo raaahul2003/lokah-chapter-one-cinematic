@@ -679,6 +679,18 @@ img {
   text-shadow: 0 6px 30px rgba(0, 0, 0, .45)
 }
 
+.character-name-line {
+  display: block
+}
+
+.character-name-line--desktop {
+  display: inline-block
+}
+
+.character-name-line--mobile {
+  display: none
+}
+
 .character-actor {
   margin: 18px 0 0;
   font: 500 10px "DM Mono", monospace;
@@ -1505,7 +1517,11 @@ img {
     gap: 0
   }
 
-  .character-name-line {
+  .character-name-line--desktop {
+    display: none
+  }
+
+  .character-name-line--mobile {
     display: block;
     line-height: .8
   }
